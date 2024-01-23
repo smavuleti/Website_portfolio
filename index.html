@@ -9,30 +9,47 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
-        <nav>
+    <header class="page-header">
+        <img src="img/sruthi-mavuleti.svg" class="page-header-item" alt="logo" style="width:300px; margin:-15px;">
+        <nav class="navigation-list">
             <ul role="tablist">
-                <li role="presentation"><a href="index.html" role="tab" class="active">Home</a></li>
+                <li role="presentation"><a href="index.html" role="tab" class=" active">Home</a></li>
+                <li role="presentation"><a href="work.html" role="tab">Work</a></li>
                 <li role="presentation"><a href="about.html" role="tab">About Me</a></li>
                 <li role="presentation"><a href="contact.html" role="tab">Contact</a></li>
-                <li style="float: right; "><img src="img/sruthi-mavuleti.svg" alt="logo"
-                        style="width:300px; margin:-15px;"></li>
 
             </ul>
         </nav>
     </header>
-    <!--<div> 
-            <a href="index.html">Home</a>
-            <a href="about.html">Contact</a>
-            <a href="contact.html">Contact</a>
-        </div>-->
-    <div>
-        <h2>Welcome to my portfolio!</h2>
+    <div class="flex-container">
+        <div> <img src="img/ProfilePic.png" class="profile_pic" alt="Profile pic"></div>
+
+        <div>
+            <h1>Welcome to my portfolio!
+            </h1>
+
+            <h3> I'm Sruthi, a web developer focused on creating and implementing practical, intuitive applications.
+                Passionate about creating innovative ideas and bringing perfection in coding and improving the human
+                experience in the digital
+                world.
+            </h3>
+
+            <a href="" style="color: #064789;">Checkout my resume</a>
+        </div>
     </div>
+
+    <footer class="page-footer">
+        <div>
+            <p> Find me on </p>
+            <img src="img/GitHub.png" alt="GitHub" style="width:35px;height:35px;">
+            <img src="img/twitter.png" alt="Twitter" style="width:35px;height:35px;">
+            <img src="img/linkedin.png" alt="LinkedIn" style="width:35px;height:35px;">
+        </div>
+    </footer>
     <script src="js/tota11y.min.js"></script>
 </body>
 
