@@ -1,44 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title> My Website</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="icon" href="img/initials.png" > 
-    </head> 
-    <body>
-        <header>
+
+<head>
+    <meta charset="utf-8">
+    <title> My Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/initials.png">
+</head>
+
+<body>
+    <header>
+        <div>
         <img src="img/logo.svg" alt="logo" style="width:200px;height:170px;">
-        <h2> My name is Sruthi Mavuleti.</h2>
-        <h3>Welcome to my portfolio!</h3>
-       <!-- <img src="img/logo.png" alt="myLogo" style="width:300px;height:300px;"> -->
-       <img src="https://placehold.co/200x70" alt="logo" >
+        <!-- <img src="img/logo.png" alt="myLogo" style="width:300px;height:300px;"> -->
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul role="tablist">
+                <li role="presentation"><a href="index.html" role="tab">Home</a></li>
+                <li role="presentation"><a href="about.html" role="tab">About Me</a></li>
+                <li role="presentation"><a href="contact.html"role="tab">Contact</a></li>
             </ul>
         </nav>
+    </div>
     </header>
-        <div class="aboutme-content">
-            <h1>Contact Page</h1>
-            Sruthi Mavuleti<br>
-            123 House<br>
-            City, 00021<br>
-            State<br>
-            <br>
-            Tel <a href="tel:+1 308 879 9087">+1 308 879 9087</a><br>
-            Email Id <a href="abc@gmail.com"> abc@gmail.com</a><br>
-            <a href="contactlink">Contact Me</a>
-          </div>
-        <footer>
-            <p> Find me on. </p>
-            <img src="img/GitHub.png" alt="GitHub" style="width:50px;height:50px;">
-            <img src="img/twitter.png" alt="Twitter" style="width:50px;height:50px;">
-            <img src="img/linkedin.png" alt="LinkedIn" style="width:50px;height:50px;">
-        </footer>
+    <div>
+        <h1>Contact</h1>
+        Sruthi Mavuleti<br>
+        123 House<br>
+        City, 00021<br>
+        State<br>
+        <br>
+        Tel <a href="tel:+1 308 879 9087" aria-label="Call us at +1 308 879 9087">+1 308 879 9087</a><br>
+        Email Id <a href="abc@gmail.com"> abc@gmail.com</a><br>
+        <a href="contactlink">Contact Me</a>
+    </div>
+    <div>
+        <br><br>
+        <!--form with validations-->
+        <form action="addcontact" method="post">
+            <label for="name"> Name: </label>
+            <input type="name" id="name" name="name" required> <br><br>
 
-    </body>
+            <label for="email"> Email id: </label>
+            <input type="email" id="email" name="email" required> <br><br>
+
+            <label for="message"> Message </label>
+            <textarea type="message" id="message" name="message" required></textarea> <br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <footer>
+        <p> Find me on. </p>
+        <img src="img/GitHub.png" alt="GitHub" style="width:50px;height:50px;">
+        <img src="img/twitter.png" alt="Twitter" style="width:50px;height:50px;">
+        <img src="img/linkedin.png" alt="LinkedIn" style="width:50px;height:50px;">
+    </footer>
+    <script src="js/tota11y.min.js"></script>
+</body>
 
 </html>
