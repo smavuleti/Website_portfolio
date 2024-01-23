@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title> My Website</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="icon" href="img/initials.png" > 
-    </head> 
-    <body>
-        <header>
-            <div>
-            <img src="img/logo.svg" alt="logo" style="width:200px;height:170px;">
-            <!-- <img src="img/logo.png" alt="myLogo" style="width:300px;height:300px;"> -->
-            <nav>
-                <ul role="tablist">
-                    <li role="presentation"><a href="index.html" role="tab">Home</a></li>
-                    <li role="presentation"><a href="about.html" role="tab">About Me</a></li>
-                    <li role="presentation"><a href="contact.html"role="tab">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-        </header>
-        <div>
-            <h1> About Me </h1>
-            <p style="font-family:verdana;">
-                <!-- I'm a UX/UI Designer who loves to make creative and attractive designs. I have 5 years of professional experience in researching and designing web applications. Now, I would like to learn to develop web applications.<br>-->
-                 As an experienced UX/UI Designer with five years of professional experience in researching and designing web applications, I am interested in expanding my skillset to include web development. My goal is to enhance my ability to develop designs and to contribute to the success of my organization.
-            </p>
-            <table>
-                <thead>
+
+<head>
+    <meta charset="utf-8">
+    <title> My Website</title>
+    <link rel="icon" href="img/initials.png">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul role="tablist">
+                <li role="presentation"><a href="index.html" role="tab">Home</a></li>
+                <li role="presentation"><a href="about.html" role="tab" class="active">About Me</a></li>
+                <li role="presentation"><a href="contact.html" role="tab">Contact</a></li>
+                <li style="float: right; "><img src="img/sruthi-mavuleti.svg" alt="logo"
+                        style="width:300px; margin:-15px;"></li>
+
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <p>
+            <!-- I'm a UX/UI Designer who loves to make creative and attractive designs. I have 5 years of professional experience in researching and designing web applications. Now, I would like to learn to develop web applications.<br>-->
+            As an experienced UX/UI Designer with five years of professional experience in researching and designing web
+            applications, I am interested in expanding my skillset to include web development. My goal is to enhance my
+            ability to develop designs and to contribute to the success of my organization.
+        </p>
+        <table>
+            <thead>
                 <tr>
                     <th>Skills</th>
                     <th>Years of Experience</th>
                     <th>Expertise</th>
                 </tr>
-            </thead>  
-            <tbody>  
+            </thead>
+            <tbody>
                 <tr>
                     <td>UX/UI</td>
                     <td>5 </td>
@@ -45,15 +53,15 @@
                     <td>2</td>
                     <td>Intermediate</td>
                 </tr>
-                <tr> 
+                <tr>
                     <td>Javascript</td>
                     <td>1</td>
                     <td>Intermediate</td>
                 </tr>
                 <tr>
-                   <td> Node.js</td>
-                   <td>1</td>
-                   <td> Beginner</td>
+                    <td> Node.js</td>
+                    <td>1</td>
+                    <td> Beginner</td>
                 </tr>
                 <tr>
                     <td> Python</td>
@@ -61,9 +69,9 @@
                     <td>Beginner</td>
                 </tr>
             </tbody>
-            </table>
-        </div>
-        <script src="js/tota11y.min.js"></script>
-    </body>
+        </table>
+    </div>
+    <script src="js/tota11y.min.js"></script>
+</body>
 
 </html>

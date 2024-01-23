@@ -4,26 +4,28 @@
 <head>
     <meta charset="utf-8">
     <title> My Website</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/initials.png">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <div>
-        <img src="img/logo.svg" alt="logo" style="width:200px;height:170px;">
-        <!-- <img src="img/logo.png" alt="myLogo" style="width:300px;height:300px;"> -->
         <nav>
             <ul role="tablist">
                 <li role="presentation"><a href="index.html" role="tab">Home</a></li>
                 <li role="presentation"><a href="about.html" role="tab">About Me</a></li>
-                <li role="presentation"><a href="contact.html"role="tab">Contact</a></li>
+                <li role="presentation"><a href="contact.html" role="tab" class="active">Contact</a></li>
+                <li style="float: right; "><img src="img/sruthi-mavuleti.svg" alt="logo"
+                        style="width:300px; margin:-15px;"></li>
+
             </ul>
         </nav>
-    </div>
     </header>
     <div>
-        <h1>Contact</h1>
         Sruthi Mavuleti<br>
         123 House<br>
         City, 00021<br>
@@ -32,11 +34,11 @@
         Tel <a href="tel:+1 308 879 9087" aria-label="Call us at +1 308 879 9087">+1 308 879 9087</a><br>
         Email Id <a href="abc@gmail.com"> abc@gmail.com</a><br>
         <a href="contactlink">Contact Me</a>
-    </div>
-    <div>
         <br><br>
+
         <!--form with validations-->
         <form action="addcontact" method="post">
+            <h3>Leave a Message</h3><br>
             <label for="name"> Name: </label>
             <input type="name" id="name" name="name" required> <br><br>
 
