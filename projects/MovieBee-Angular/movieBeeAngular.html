@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sruthi Mavuleti</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="../../imgs/initials.png" />
+
+  <!-- Normalize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../project-view.css" />
+
+  <!-- Accessibility Script -->
+  <script src="../../js/tota11y.min.js"></script>
+</head>
+
+<body>
+  <header class="page-header">
+    <a href="../../work.html" class="my-button back-button">Back to Works</a>
+    <span class="header-text">Client Side (Angular) Application</span>
+    <nav class="page-actions">
+      <a href="https://github.com/smavuleti/MovieBee-React" class="my-button">GitHub</a>
+      <a href="https://www.dropbox.com/scl/fi/7jdwip57tzhf0itp98bkm/Angular.mov?rlkey=7kyjs2rplzox6dljbn4np4q80&st=b807pilh&dl=0"
+        class="my-button">App Demo</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="brief">
+      <h2>About</h2>
+      <p>
+        The client-side for the MovieBee application using Angular, based on its
+        existing server-side code (MovieBee-API),
+        with supporting documentation.
+      </p>
+
+    </section>
+    <h2 style="text-align: center;">Application Screens</h2>
+    <section class="output">
+      <div class="gallery-container">
+        <div class="controls">
+          <button class="btn" onclick="prevImage()">Previous</button>
+          <button class="btn" onclick="nextImage()">Next</button>
+        </div>
+        <!-- Title of the active image -->
+        <div id="imageTitle" class="image-title"></div>
+        <div class="gallery">
+          <img src="imgs/Welcome.png" alt="Welcome" />
+          <img src="imgs/AllMovies.png" alt="Display All Movies" />
+          <img src="imgs/UserProfile.png" alt="User Profile" />
+          <img src="imgs/UserFavMovies.png" alt="User Favorite Movies" />
+          <img src="imgs/DirectorDetails.png" alt="Director Details" />
+          <img src="imgs/GenreDetails.png" alt="Genre Details" />
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const images = document.querySelectorAll(".gallery img");
+    const titles = [
+      "Welcome page",
+      "Display All Movies",
+      "User Profile",
+      "User Favorite Movies",
+      "Get Director details",
+      "Get Genre details",
+    ];
+
+    let currentIndex = 0;
+
+    function showImage(index) {
+      images.forEach((img) => img.classList.remove("active"));
+      images[index].classList.add("active");
+      document.getElementById("imageTitle").innerText = titles[index];
+    }
+
+    function prevImage() {
+      currentIndex =
+        currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+      showImage(currentIndex);
+    }
+
+    function nextImage() {
+      currentIndex =
+        currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+      showImage(currentIndex);
+    }
+
+    showImage(currentIndex);
+  </script>
+</body>
+
+</html>

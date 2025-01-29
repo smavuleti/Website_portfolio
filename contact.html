@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title> My Website</title>
-    <link rel="icon" href="img/initials.png">
+    <link rel="icon" href="imgs/initials.png">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
@@ -14,7 +14,7 @@
 
 <body>
     <header class="page-header">
-        <img src="img/sruthi-mavuleti.svg" class="page-header-item" alt="logo" style="width:300px; margin:-15px;">
+        <img src="imgs/sruthi-mavuleti.svg" class="page-header-item" alt="logo" style="width:300px; margin:-15px;">
         <nav class="navigation-list">
             <ul role="tablist">
                 <li role="presentation"><a href="index.html" role="tab">Home</a></li>
@@ -28,37 +28,46 @@
     <div class="aboutme-content">
         <h1>Contact</h1>
         Sruthi Mavuleti<br>
-        123 House<br>
-        City, 00021<br>
-        State<br>
+        Dublin, 94568<br>
+        California<br>
         <br>
-        Tel <a href="tel:+1 308 879 9087" aria-label="Call us at +1 308 879 9087">+1 308 879 9087</a><br>
-        Email Id <a href="abc@gmail.com"> abc@gmail.com</a><br>
-        <a href="contactlink">Contact Me</a>
+        Tel <a href="tel:+1 (925) 765-7098" aria-label="Call us at +1 (925) 765-7098">+1 (925) 765-7098</a><br>
+        Email Id <a href="sruthi.mavuleti@gmail.com"> sruthi.mavuleti@gmail.com</a><br>
+        
         <br><br>
 
-        <!--form with validations-->
-        <form action="addcontact" method="post">
-            <h3>Leave a Message</h3><br>
-            <label for="name"> Name: </label>
-            <input type="name" id="name" name="name" required> <br><br>
-
-            <label for="email"> Email id: </label>
-            <input type="email" id="email" name="email" required> <br><br>
-
-            <label for="message"> Message </label>
-            <textarea type="message" id="message" name="message" required></textarea> <br><br>
-
-            <button type="submit">Submit</button>
+        <form action="addcontact" method="post" class="contact-form">
+            <h3>Leave a Message</h3>
+        
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required autocomplete="name" maxlength="50">
+            </div>
+        
+            <div class="form-group">
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="email">
+            </div>
+        
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Write your message here..." rows="4" required maxlength="500"></textarea>
+            </div>
+        
+            <button type="submit" class="submit-button">Submit</button>
         </form>
+        
     </div>
 
     <footer class="page-footer">
         <div>
             <p> Find me on </p>
-            <img src="img/GitHub.png" alt="GitHub" style="width:35px;height:35px;">
-            <img src="img/twitter.png" alt="Twitter" style="width:35px;height:35px;">
-            <img src="img/linkedin.png" alt="LinkedIn" style="width:35px;height:35px;">
+            <a href="https://github.com/smavuleti" target="_blank" rel="noopener noreferrer">
+                <img src="imgs/GitHub.png" alt="GitHub" style="width:35px;height:35px;">
+            </a>
+            <a href="https://www.linkedin.com/in/sruthi-mavuleti-93ab80219/" target="_blank" rel="noopener noreferrer">
+                <img src="imgs/linkedin.png" alt="LinkedIn" style="width:35px;height:35px;">
+            </a>
         </div>
     </footer>
     <script src="js/tota11y.min.js"></script>

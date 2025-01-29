@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sruthi Mavuleti</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="../../imgs/initials.png" />
+
+  <!-- Normalize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../project-view.css" />
+
+  <!-- Accessibility Script -->
+  <script src="../../js/tota11y.min.js"></script>
+</head>
+
+<body>
+  <header class="page-header">
+    <a href="../../work.html" class="my-button back-button">Back to Works</a>
+    <span class="header-text">Pokémon JavaScript App</span>
+    <nav class="page-actions">
+      <a href="https://github.com/smavuleti/simple-js-app" class="my-button">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="brief">
+      <h2>About</h2>
+      <p>
+        This project aims to build a small web application using HTML, CSS,
+        and JavaScript. The application will load data from an external API
+        and allow users to view a list of data items and see detailed information
+        about a selected item.
+      </p>
+
+    </section>
+    <section class="output">
+      <div class="gallery-container">
+        <div class="controls">
+          <button class="btn" onclick="prevImage()">Previous</button>
+          <button class="btn" onclick="nextImage()">Next</button>
+        </div>
+        <!-- Title of the active image -->
+        <div id="imageTitle" class="image-title"></div>
+        <div class="gallery">
+          <img src="imgs/PokemonList.png" alt="Pokemon List" />
+          <img src="imgs/PokemonView-1.png" alt="Pokemon Details View" />
+          <img src="imgs/PokemonView-2.png" alt="Pokemon Details View" />
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const images = document.querySelectorAll(".gallery img");
+    const titles = [
+      "Pokemon List",
+      "Pokemon Details View",
+      "Pokemon Details View"
+    ];
+
+    let currentIndex = 0;
+
+    function showImage(index) {
+      images.forEach((img) => img.classList.remove("active"));
+      images[index].classList.add("active");
+      document.getElementById("imageTitle").innerText = titles[index];
+    }
+
+    function prevImage() {
+      currentIndex =
+        currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+      showImage(currentIndex);
+    }
+
+    function nextImage() {
+      currentIndex =
+        currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+      showImage(currentIndex);
+    }
+
+    showImage(currentIndex);
+  </script>
+</body>
+
+</html>

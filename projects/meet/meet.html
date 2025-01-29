@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sruthi Mavuleti</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="../../imgs/initials.png" />
+
+  <!-- Normalize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../project-view.css" />
+
+  <!-- Accessibility Script -->
+  <script src="../../js/tota11y.min.js"></script>
+</head>
+
+<body>
+  <header class="page-header">
+    <a href="../../work.html" class="my-button back-button">Back to Works</a>
+    <span class="header-text">Meet App - Serverless Progressive Web Application (PWA) with React</span>
+    <nav class="page-actions">
+      <a href="https://github.com/smavuleti/meet" class="my-button">GitHub</a>
+      <a href="https://meet-git-main-sruthis-projects-abf7475f.vercel.app/" class="my-button">App Demo</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="brief">
+      <h2>About</h2>
+      <p>
+        A serverless, progressive web application (PWA) using React and a
+        test-driven development (TDD) approach.
+        The application fetches upcoming events using the Google Calendar API.
+      </p>
+
+    </section>
+    <h2 style="text-align: center;">User Stories & Scenarios</h2>
+    <section class="output">
+      <div class="gallery-container">
+        <div class="controls">
+          <button class="btn" onclick="prevImage()">Previous</button>
+          <button class="btn" onclick="nextImage()">Next</button>
+        </div>
+        <!-- Title of the active image -->
+        <div id="imageTitle" class="image-title"></div>
+        <div class="gallery">
+          <img src="imgs/Filter.png" alt="Filter Events by City" />
+          <img src="imgs/NumberOfEvents.png" alt="Specify Number of Events " />
+          <img src="imgs/ShowHide.png" alt="Show/Hide Event Details" />
+          <img src="imgs/AppShortcut.png" alt="Add Meet App Shortcut to Home Screen" />
+          <img src="imgs/AppOffline.png" alt="Use the app when offline" />
+          <img src="imgs/DisplayCharts.png" alt="Display Charts Visualizing Event Details" />
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const images = document.querySelectorAll(".gallery img");
+    const titles = [
+      "Filter Events by City",
+      "Specify Number of Events",
+      "Show/Hide Event Details",
+      "Add Meet App Shortcut to Home Screen",
+      "Use the app when offline",
+      "Display Charts Visualizing Event Details",
+    ];
+
+    let currentIndex = 0;
+
+    function showImage(index) {
+      images.forEach((img) => img.classList.remove("active"));
+      images[index].classList.add("active");
+      document.getElementById("imageTitle").innerText = titles[index];
+    }
+
+    function prevImage() {
+      currentIndex =
+        currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+      showImage(currentIndex);
+    }
+
+    function nextImage() {
+      currentIndex =
+        currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+      showImage(currentIndex);
+    }
+
+    showImage(currentIndex);
+  </script>
+</body>
+
+</html>
